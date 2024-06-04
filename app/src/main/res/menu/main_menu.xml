@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item android:id="@+id/navHome"
+        android:title="Home"
+        android:icon="@drawable/home_icon"></item>
+
+    <item android:id="@+id/navAbout"
+        android:title="About"
+        android:icon="@drawable/about_icon"></item>
+
+    <item android:id="@+id/navAwareness"
+        android:title="Cyberbullying Awareness"
+        android:icon="@drawable/awareness_icon"></item>
+
+</group>
+
+
+    <item android:title="Support">
+        <menu>
+            <group android:checkableBehavior="single">
+        <item android:id="@+id/navSeekHelp"
+            android:title="Seek Help"
+            android:icon="@drawable/seekhelp_icon"></item>
+
+            <item android:id="@+id/navSelfHelp"
+                android:title="Self-Help"
+                android:icon="@drawable/selfhelp_icon"></item>
+            </group>
+        </menu>
+    </item>
+
+
+        <item android:title="Setting">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item android:title="Contact Us"
+                    android:id="@+id/navContact"
+                    android:icon="@drawable/contact_icon">
+
+                </item>
+
+                <item android:id="@+id/navEditProfile"
+                    android:title="Profile"
+                    android:icon="@drawable/edit_icon"></item>
+
+                <item android:id="@+id/navLogout"
+                    android:title="Log Out"
+                    android:icon="@drawable/logout_icon">
+
+                </item>
+                </group>
+            </menu>
+        </item>
+
+
+</menu>
