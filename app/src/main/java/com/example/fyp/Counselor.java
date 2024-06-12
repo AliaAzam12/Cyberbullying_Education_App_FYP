@@ -76,9 +76,17 @@ public class Counselor extends AppCompatActivity {
                 }
 
                 String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                String appointmentId = FirebaseDatabase.getInstance().getReference("Appoinments").push().getKey();
+                String appointmentId = FirebaseDatabase.getInstance().getReference("Registered User")
+                        .child(userId)
+                        .child("Appointments")
+                        .push()
+                        .getKey();
                 Appointment appointment = new Appointment(name, phoneNo, email, date, time);
-                FirebaseDatabase.getInstance().getReference("Appoinments").child(userId).child(appointmentId).setValue(appointment).addOnCompleteListener(new OnCompleteListener<Void>() {
+                FirebaseDatabase.getInstance().getReference("Registered User")
+                        .child(userId)
+                        .child("Appointments")
+                        .child(appointmentId)
+                        .setValue(appointment).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
